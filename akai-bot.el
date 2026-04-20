@@ -65,7 +65,7 @@
             (rpg-save-db)
             (akai-bot-say (format "[BARTER] %s earned %dg from their shop. (total: %dg)"
                                   name akai-bot-barter-gold-amount
-                                  (or (rpg-pget p 'gold) 0))))))))))
+                                  (or (rpg-pget p 'gold) 0)))))))))
 
 (defun akai-bot-start-tick-timer ()
   "Start (or restart) the passive tick timer."
