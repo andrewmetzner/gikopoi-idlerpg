@@ -72,7 +72,7 @@
   :type '(choice (const nil) string))
 
 (defcustom gikopoi-default-room nil
-  "The room to join without prompting, or nil."
+  "The room to join without prompting, or nil to auto-join the most populated room."
   :group 'gikopoi
   :type '(choice (const nil) string))
 
@@ -2002,13 +2002,14 @@ This version is case-sensitive."
                                        (cdr (assoc server gikopoi-servers)))))
             (if (string= input "") gikopoi-default-area input)))
          (room
-          (let ((input (read-string (format "Room (default %s): " gikopoi-default-room))))
+          (let ((input (read-string (format "Room (default %s): "
+                                            (or gikopoi-default-room "auto")))))
             (if (string= input "")
                 (or (gikopoi-get-most-populated-room server) gikopoi-default-room)
               input)))
          (name
           (let* ((original-name gikopoi-default-name)
-                 (display-name (if (string-match "#.*" original-name)
+                 (display-name (if (and original-name (string-match "#.*" original-name))
                                    (replace-regexp-in-string "#.*" "#*****" original-name)
                                  original-name))
                  (input (read-string (format "Name (default %s): " display-name))))

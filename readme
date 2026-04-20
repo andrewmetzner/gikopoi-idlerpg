@@ -1,8 +1,1 @@
-akai's fork of gikomacs
-
-features:
-- text-wrap, auto-scroll message buffer
-- auto-ignore feature (M-x gikopoi-auto-ignore)
-- auto-logger
-- auto-log out timer
-- other QoL
+gikopoi idle RPG

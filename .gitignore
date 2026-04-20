@@ -1,0 +1,17 @@
+# Player database (auto-generated, do not overwrite on pull)
+akai-bot-players.el
+
+# Credentials
+tripcode.gpg
+
+# Logs
+logs/
+
+# User-local config
+auto-ignore.txt
+sites
+langs
+
+# Emacs backup/temp files
+*~
+\#*\#

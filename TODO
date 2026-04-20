@@ -1,3 +1,7 @@
+DONE: $help consolidated to one message; all bot messages now call gikopoi-send with endln=t to auto-clear bubble.
+DONE: blank sender name "" now displayed as "Anonymous" in all replies.
+
+
 what's new in 693.4
 
 highlighted URLs using goto-address-mode
